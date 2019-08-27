@@ -806,7 +806,6 @@ public class Core extends Thread {
         boolean convertFPS = configuration.getConvertFPS();
         subPictures = new SubPicture[subtitleStream.getFrameCount()];
         double factTS = convertFPS ? configuration.getFPSSrc() / configuration.getFpsTrg() : 1.0;
-        logger.info("Src FPS: " + configuration.getFPSSrc() + " | Trg FPS: " + configuration.getFpsTrg() + " | factTS: " + factTS);
         // change target resolution to source resolution if no conversion is needed
         if (!configuration.getConvertResolution() && getNumFrames() > 0) {
             configuration.setOutputResolution(getResolutionForDimension(getSubPictureSrc(0).getWidth(), getSubPictureSrc(0).getHeight()));

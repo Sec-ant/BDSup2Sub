@@ -329,6 +329,9 @@ public class BDSup2Sub {
         if (!options.isTimestampsMode()) {
             System.err.println("\nConversion finished.");
         }
+        else {
+            System.err.println("\nReading finished.");
+        }
         System.exit(0);
     }
 
